@@ -1,0 +1,17 @@
+export const AUTH_USER = 'auth_user';
+export const UNAUTH_USER = 'unauth_user';
+export const AUTH_ERROR = 'auth_error';
+export const FETCH_INFO = 'fetch_info';
+export const FETCH_PROFILE = 'fetch_profile';
+export const FETCH_LISTINGS = 'fetch_listings';
+export const FETCH_MY_LISTINGS = 'fetch_my_listings';
+export const NEW_LISTING = 'new_listing';
+export const FETCH_SINGLE_LISTING = 'fetch_single_listing';
+export const EDIT_LISTING = 'edit_listing';
+export const EDIT_USER = 'edit_user';
+export const UPLOAD_PHOTO = 'upload_photo';
+export const UPLOAD_AVATAR = 'upload_avatar';
+export const NEW_BLOG = 'new_blog';
+export const FETCH_SINGLE_BLOG = 'fetch_single_blog';
+export const FETCH_ALL_BLOGS = 'fetch_all_blogs';
+export const SET_MARKDOWN = 'set_markdown';

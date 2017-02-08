@@ -1,0 +1,405 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #efefef !important;
+}
+
+a {
+  color: #00B7FF;
+}
+.onephotoviewing {
+  width: 55%;
+}
+.imageHolderCenter {
+  text-align: center;
+}
+#titleHeader {
+  font-size: 60px;
+}
+.photoOne {
+  height:383px;
+}
+.infoPara {
+  font-size: 24px;
+}
+.photoBlock {
+  height: 300px;
+}
+.top-buffer {
+  margin-top:40px;
+}
+.textSegment {
+  font-size: 32px;
+}
+.error {
+  color: red;
+}
+
+.navbar-right {
+  margin-right: 15px !important;
+}
+
+.listingBorder {
+  border: 1px black solid;
+  height: 450px;
+}
+
+.thumbnail {
+  margin-top: 5px;
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+}
+.hidden {
+  display:none;
+}
+
+#headerImage {
+  height: 500px;
+  background-image: url("../images/header3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -20px;
+}
+.center-div {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  margin-top: -400px;
+}
+.transbox {
+  text-align:center;
+  margin: 30px;
+  height: 225px;
+  background-color: #000000;
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+.transbox h1 {
+  font-size: 64px;
+  padding-top: 6%;
+  font-weight: bold;
+  color: white;
+}
+
+.navbar-logo-hfh {
+  font-size: 36px;
+  top: 3px;
+  color: #D3D3D3;
+  padding: 0 0 0 11px;
+}
+
+.navbar-links-hfh > li > a{
+  color: black;
+  font-size: 24px;
+}
+
+
+.listingListImage {
+  /*width: 100%;*/
+  max-height: 200px;
+}
+.searchInput {
+  float: right;
+}
+.searchLabel {
+  font-size: 18px;
+}
+
+.background-down {
+  margin-top: 150px;
+}
+.borderBottom {
+  border-bottom: 1px solid black;
+}
+.commentBlock {
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 10px;
+  padding: 0px 5px 5px 40px;
+}
+.toppush {
+  margin-top: 75px;
+}
+.minipush {
+  margin-top: 25px;
+}
+.messagepush {
+  margin-top: 2%;
+}
+.blogListingBorder {
+  border: 1px black solid;
+  padding: 5px 5px 5px 5px;
+  list-style: none;
+}
+.removeListBullet {
+  list-style-type: none;
+}
+.photoBookBorder {
+  border: 1px black solid;
+  padding: 5px 5px 5px 5px;
+  list-style: none;
+  width: 250px;
+  height: 250px;
+}
+.photoBookImage {
+  max-width: 100%;
+  max-height: 200px;
+}
+.body-spacing {
+  white-space: pre-line;
+}
+
+.init-hidden {
+  display: none;
+}
+
+.table-row:hover {
+  cursor: pointer;
+}
+
+.unreadMessages {
+  color: orange;
+}
+.chainList {
+  height: 100vh;
+}
+.myMessage {
+  float: right;
+  max-width: 50%;
+  margin-right: 5%;
+  border: 1px solid lightblue;
+  background-color: lightblue;
+  border-radius: 5000px;
+  padding: 5px 15px 5px 15px;
+}
+.theirMessage {
+  margin-left: 5%;
+  float: left;
+  max-width: 50%;
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 5000px;
+  padding: 5px 15px 5px 15px;
+}
+
+.messageChainUser:hover {
+  cursor: pointer;
+}
+.textScroller {
+  width: 100%;
+  height: 60vh;
+  overflow: scroll;
+}
+
+
+/* REACT DATETIME*/
+.rdt {
+  position: relative;
+}
+.rdtPicker {
+  display: none;
+  position: absolute;
+  width: 250px;
+  padding: 4px;
+  margin-top: 1px;
+  z-index: 99999 !important;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,.1);
+  border: 1px solid #f9f9f9;
+}
+.rdtOpen .rdtPicker {
+  display: block;
+}
+.rdtStatic .rdtPicker {
+  box-shadow: none;
+  position: static;
+}
+
+.rdtPicker .rdtTimeToggle {
+  text-align: center;
+}
+
+.rdtPicker table {
+  width: 100%;
+  margin: 0;
+}
+.rdtPicker td,
+.rdtPicker th {
+  text-align: center;
+  height: 28px;
+}
+.rdtPicker td {
+  cursor: pointer;
+}
+.rdtPicker td.rdtDay:hover,
+.rdtPicker td.rdtHour:hover,
+.rdtPicker td.rdtMinute:hover,
+.rdtPicker td.rdtSecond:hover,
+.rdtPicker .rdtTimeToggle:hover {
+  background: #eeeeee;
+  cursor: pointer;
+}
+.rdtPicker td.rdtOld,
+.rdtPicker td.rdtNew {
+  color: #999999;
+}
+.rdtPicker td.rdtToday {
+  position: relative;
+}
+.rdtPicker td.rdtToday:before {
+  content: '';
+  display: inline-block;
+  border-left: 7px solid transparent;
+  border-bottom: 7px solid #428bca;
+  border-top-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+}
+.rdtPicker td.rdtActive,
+.rdtPicker td.rdtActive:hover {
+  background-color: #428bca;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.rdtPicker td.rdtActive.rdtToday:before {
+  border-bottom-color: #fff;
+}
+.rdtPicker td.rdtDisabled,
+.rdtPicker td.rdtDisabled:hover {
+  background: none;
+  color: #999999;
+  cursor: not-allowed;
+}
+
+.rdtPicker td span.rdtOld {
+  color: #999999;
+}
+.rdtPicker td span.rdtDisabled,
+.rdtPicker td span.rdtDisabled:hover {
+  background: none;
+  color: #999999;
+  cursor: not-allowed;
+}
+.rdtPicker th {
+  border-bottom: 1px solid #f9f9f9;
+}
+.rdtPicker .dow {
+  width: 14.2857%;
+  border-bottom: none;
+}
+.rdtPicker th.rdtSwitch {
+  width: 100px;
+}
+.rdtPicker th.rdtNext,
+.rdtPicker th.rdtPrev {
+  font-size: 21px;
+  vertical-align: top;
+}
+
+.rdtPrev span,
+.rdtNext span {
+  display: block;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.rdtPicker th.rdtDisabled,
+.rdtPicker th.rdtDisabled:hover {
+  background: none;
+  color: #999999;
+  cursor: not-allowed;
+}
+.rdtPicker thead tr:first-child th {
+  cursor: pointer;
+}
+.rdtPicker thead tr:first-child th:hover {
+  background: #eeeeee;
+}
+
+.rdtPicker tfoot {
+  border-top: 1px solid #f9f9f9;
+}
+
+.rdtPicker button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.rdtPicker button:hover {
+  background-color: #eee;
+}
+
+.rdtPicker thead button {
+  width: 100%;
+  height: 100%;
+}
+
+td.rdtMonth,
+td.rdtYear {
+  height: 50px;
+  width: 25%;
+  cursor: pointer;
+}
+td.rdtMonth:hover,
+td.rdtYear:hover {
+  background: #eee;
+}
+
+.rdtCounters {
+  display: inline-block;
+}
+
+.rdtCounters > div {
+  float: left;
+}
+
+.rdtCounter {
+  height: 100px;
+}
+
+.rdtCounter {
+  width: 40px;
+}
+
+.rdtCounterSeparator {
+  line-height: 100px;
+}
+
+.rdtCounter .rdtBtn {
+  height: 40%;
+  line-height: 40px;
+  cursor: pointer;
+  display: block;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;
+}
+.rdtCounter .rdtBtn:hover {
+  background: #eee;
+}
+.rdtCounter .rdtCount {
+  height: 20%;
+  font-size: 1.2em;
+}
+
+.rdtMilli {
+  vertical-align: middle;
+  padding-left: 8px;
+  width: 48px;
+}
+
+.rdtMilli input {
+  width: 100%;
+  font-size: 1.2em;
+  margin-top: 37px;
