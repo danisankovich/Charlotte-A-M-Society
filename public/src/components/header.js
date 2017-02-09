@@ -60,7 +60,7 @@ class Header extends Component {
       <nav className="navbar navbar-inverse">
         <div className="container-fluid">
           <div className="navbar-header">
-            <Link to="/" className="navbar-logo-hfh">HFH</Link>
+            <Link to="/" className="navbar-logo-cams">CAMS</Link>
 
             <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
               <span className="icon-bar"></span>
@@ -70,7 +70,7 @@ class Header extends Component {
           </div>
 
           <div className="collapse navbar-collapse" id="myNavbar">
-            <ul className="nav navbar-nav navbar-right navbar-links-hfh">
+            <ul className="nav navbar-nav navbar-right navbar-links-cams">
               {this.renderLinks()}
             </ul>
           </div>

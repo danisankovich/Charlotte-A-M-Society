@@ -82,14 +82,14 @@ a {
   color: white;
 }
 
-.navbar-logo-hfh {
+.navbar-logo-cams {
   font-size: 36px;
   top: 3px;
   color: #D3D3D3;
   padding: 0 0 0 11px;
 }
 
-.navbar-links-hfh > li > a{
+.navbar-links-cams > li > a{
   color: black;
   font-size: 24px;
 }

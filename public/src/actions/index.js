@@ -16,9 +16,9 @@ export function signupUser({email, password, username}) {
     signUp(dispatch, {email, password, username})
   }
 }
-export function editUser({phoneNumber, email, lang}, user) {
+export function editUser({phoneNumber, email, lang, aboutMe}, user) {
   return function(dispatch) {
-    userEdit(dispatch, {phoneNumber, email, lang}, user)
+    userEdit(dispatch, {phoneNumber, email, lang, aboutMe}, user)
   }
 }
 export function removeListing(id) {

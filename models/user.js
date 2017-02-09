@@ -20,7 +20,8 @@ var userSchema = new Schema({
   following: {type: Array},
   confirmedStays: [],
   messagesChainIds: [],
-  newMessages: Boolean
+  newMessages: Boolean,
+  aboutMe: String,
 });
 
 userSchema.methods.comparePassword = function(candidatePassword, cb) {

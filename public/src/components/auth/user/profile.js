@@ -11,7 +11,6 @@ class Profile extends Component {
       showPhotos: false,
       showListings: false,
       showBlogs: false,
-      showApplications: false,
       showInfo: true
     })
   }
@@ -26,7 +25,6 @@ class Profile extends Component {
       showPhotos: false,
       showListings: false,
       showBlogs: false,
-      showApplications: false,
       showInfo: false
     }
     if (!hide) {
@@ -60,6 +58,7 @@ class Profile extends Component {
               {this.state.showInfo && <div className="col-sm-offset-1">
                 <h3>Email: {userInfo.email}</h3>
                 <h3>Phone Number: {userInfo.phoneNumber}</h3>
+                <h3>About Me: </h3><p>{userInfo.aboutMe}</p>
               </div>}
               {this.state.showPhotos && <PhotoBook userInfo={this.props.userInfo}></PhotoBook>}
               {this.state.showListings && <MyListings userInfo={this.props.userInfo}></MyListings>}

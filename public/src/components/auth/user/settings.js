@@ -17,12 +17,10 @@ class Settings extends Component {
       editEmail: false,
       editPhone: false,
       editUser: false,
+      editAboutMe: false,
     });
-  }
-  componentDidMount() {
     this.props.fetchInfo();
   }
-
   // handle hide/show clicks
   handleClick(type) {
      this.setState(type);
@@ -44,6 +42,11 @@ class Settings extends Component {
     this.props.fetchInfo();
     this.setState({editEmail: false})
   }
+  handleFormSubmitAboutMe(formProps) { //called with props from submit form
+    this.props.editUser(formProps, this.props.userInfo._id);
+    this.props.fetchInfo();
+    this.setState({editAboutMe: false})
+  }
   handleLangClick(formProps) {
     this.props.editUser(formProps, this.props.userInfo._id);
     this.props.fetchInfo();
@@ -62,6 +65,9 @@ class Settings extends Component {
       reader.readAsDataURL(file);
     }
   }
+  onChangeTextArea(e) {
+    console.log('asdfasdf')
+  }
   uploadAvatar() {
     let avatar = this.state.file;
     this.props.uploadAvatar(avatar, this.props.userInfo._id)
@@ -70,11 +76,13 @@ class Settings extends Component {
   }
   render() {
     let self = this;
-    const { handleSubmit, fields: {phoneNumber, email }} = this.props;
+    const { handleSubmit, fields: {phoneNumber, email, aboutMe }} = this.props;
 
     let {userInfo} = this.props;
-
     let avatar = this.state.file
+    if (userInfo) {
+      this.state.aboutMe = this.props.userInfo.aboutMe
+    }
     if(userInfo) {
       return (
         <div className="toppush">
@@ -141,6 +149,29 @@ class Settings extends Component {
                 <button action="submit" className={this.state.file ? '' : 'hidden'}>Change Avatar</button>
               </form>
             </li>
+            <li
+              className={this.state.editAboutMe ? 'hidden' : ''}
+              onClick={function(){
+                this.handleClick({editAboutMe: true})
+              }.bind(this)}>
+              About Me: {this.props.userInfo.aboutMe}
+            </li>
+            <li className={this.state.editAboutMe ? '' : 'hidden'}>
+              <form>
+                <fieldset className="form-group">
+                  <label>About Me: {this.props.userInfo.aboutMe}</label>
+                  {aboutMe.touched && aboutMe.error && <div className="error">{aboutMe.error}</div>}
+                  <textarea className="form-control" type='text' {...aboutMe}></textarea>
+                </fieldset>
+                <button type='button' className="btn btn-danger"
+                  onClick={function(){
+                    this.handleClick({editAboutMe: false})
+                  }.bind(this)}>
+                  hide
+                </button>
+                <button onClick={handleSubmit(this.handleFormSubmitAboutMe.bind(this))} className="btn btn-primary">Save</button>
+              </form>
+            </li>
           </ul>
         </div>
       );
@@ -152,10 +183,12 @@ class Settings extends Component {
 }
 
 function mapStateToProps(state) {
-  return {userInfo: state.auth.userInfo};
+  return {
+    userInfo: state.auth.userInfo,
+  };
 }
 
 export default reduxForm({
-  form: 'settings',
-  fields: ['email', 'phoneNumber', 'avatar'],
+  form: 'Settings',
+  fields: ['email', 'phoneNumber', 'avatar', 'aboutMe'],
 }, mapStateToProps, actions)(Settings);

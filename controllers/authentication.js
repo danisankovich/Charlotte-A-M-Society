@@ -72,9 +72,11 @@ exports.editInfo = function(req, res, next) {
   const data = JSON.parse(req.body.data);
   var newPhone = data.phoneNumber;
   var newEmail = data.email;
+  var aboutMe = data.aboutMe;
   User.findById(data.user, (err, user) => {
     user.phoneNumber = newPhone || user.phoneNumber;
     user.email = newEmail || user.email;
+    user.aboutMe = aboutMe || user.aboutMe;
     user.save()
     res.send(user);
   })
