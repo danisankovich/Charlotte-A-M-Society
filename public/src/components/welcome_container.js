@@ -14,11 +14,6 @@ class Welcome_Container extends Component {
         <div id="headerImage">
 
         </div>
-        <div className='center-div'>
-          <div className="transbox">
-            <h1>CAMS</h1>
-          </div>
-        </div>
 
         <div className="container background-down">
           <div className="row">

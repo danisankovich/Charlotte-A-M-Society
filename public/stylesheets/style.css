@@ -6,6 +6,10 @@ body {
 a {
   color: #00B7FF;
 }
+.mainContent {
+  margin-top: -100px;
+  text-align: center;
+}
 .onephotoviewing {
   width: 55%;
 }
@@ -54,11 +58,12 @@ a {
 }
 
 #headerImage {
-  height: 500px;
-  background-image: url("../images/header3.jpg");
+  height: 720px;
+  /*width: 100%;*/
+  background-image: url("../images/header2.png");
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: -20px;
+  margin-top: -80px;
 }
 .center-div {
   margin: auto;
@@ -67,6 +72,7 @@ a {
   margin-top: -400px;
 }
 .transbox {
+  display: none;
   text-align:center;
   margin: 30px;
   height: 225px;
@@ -403,3 +409,4 @@ td.rdtYear:hover {
   width: 100%;
   font-size: 1.2em;
   margin-top: 37px;
+}
