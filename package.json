@@ -52,6 +52,7 @@
     "redux-form": "^5.3.3",
     "redux-promise": "^0.5.3",
     "redux-thunk": "^2.1.0",
+    "request": "^2.79.0",
     "serve-favicon": "~2.3.0"
   }
 }
